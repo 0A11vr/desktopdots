@@ -1,0 +1,23 @@
+#!/bin/sh
+
+xrandr --output DisplayPort-0 --mode 1920x1080 --rate 144.00 &
+[[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
+xsetroot -cursor_name left_ptr &
+numlockx &
+/usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
+picom --experimental-backend &
+export _JAVA_AWT_WM_NONREPARENTING=1 &
+hsetroot -solid "#303030" &
+
+#skippy-xd --start-daemon &
+session=${1:-2bwm}
+
+case $session in
+    2bwm)		flashfocus &
+			sxhkd -c ~/.config/2bwm/2bwmrc &
+			exec 2bwm;;
+    sowm) 		sxhkd -c ~/.config/sowm/sowmrc &
+			exec sowm;;
+    # No known session, try to run it as command
+    *                 ) exec $1;;
+esac
