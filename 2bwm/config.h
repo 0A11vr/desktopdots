@@ -1,6 +1,7 @@
 ///---User configurable stuff---///
 ///---Modifiers---///
 #define MOD             XCB_MOD_MASK_1       /* Super/Windows key  or check xmodmap(1) with -pm  defined in /usr/include/xcb/xproto.h */
+#define MOD3		XCB_MOD_MASK_3
 ///--Speed---///
 /* Move this many pixels when moving or resizing with keyboard unless the window has hints saying otherwise.
  *0)move step slow   1)move step fast
@@ -40,7 +41,8 @@ static const uint8_t borders[] = {3,5,5,4};
 #define LOOK_INTO "WM_NAME"
 static const char *ignore_names[] = {"bar", "xclock"};
 ///--Menus and Programs---///
-static const char  *menucmd[]   = { "rofi", "-show", "drun", NULL };
+//static const char  *menucmd[]   = { "rofi", "-show", "drun", NULL };
+static const char  *menucmd[]   = { "rofi", "-show", "drun", "-show-icons", NULL };
 //static const char  *termcmd[]   = { "kitty", NULL };
 //static const char *scrotcmd[]   = { "scrot", "-e", "mv $f ~/Pictures/screenshots", NULL };
 ///--Custom foo---///
@@ -162,7 +164,7 @@ static key keys[] = {
     {  MOD ,              XK_comma,      changescreen,      {.i=TWOBWM_NEXT_SCREEN}},
     {  MOD ,              XK_period,     changescreen,      {.i=TWOBWM_PREVIOUS_SCREEN}},
     // Raise or lower a window
-    {  MOD ,              XK_r,          raiseorlower,      {}},
+    {  MOD3 ,              XK_r,          raiseorlower,      {}},
     // Next/Previous workspace
     {  MOD ,              XK_v,          nextworkspace,     {}},
     {  MOD ,              XK_c,          prevworkspace,     {}},
@@ -188,11 +190,11 @@ static key keys[] = {
     {  MOD |SHIFT,        XK_Right,      cursor_move,       {.i=TWOBWM_CURSOR_RIGHT}},
     {  MOD |SHIFT,        XK_Left,       cursor_move,       {.i=TWOBWM_CURSOR_LEFT}},
     // Start programs
-    {  MOD ,              XK_space,          start,             {.com =  menucmd}},
+    {  MOD ,             XK_space,          start,             {.com =  menucmd}},
     //{  MOD ,              XK_Return,         start,             {.com =  termcmd}},
     //{  MOD ,              XK_p,              start,             {.com =  scrotcmd}},
     // Exit or restart 2bwm
-    {  ALT |SHIFT,        XK_Escape,           twobwm_exit,  {.i=0}},
+    {  ALT | SHIFT,        XK_Escape,           twobwm_exit,  {.i=0}},
     {  MOD |CONTROL,      XK_r,           twobwm_restart,    {.i=0}},
     {  MOD ,              XK_i,          halfandcentered,    {.i=0}},
     // Change current workspace
