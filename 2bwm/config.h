@@ -45,6 +45,7 @@ static const char *ignore_names[] = {"bar", "xclock"};
 static const char  *menucmd[]   = { "rofi", "-show", "drun", "-show-icons", NULL };
 //static const char  *termcmd[]   = { "kitty", NULL };
 //static const char *scrotcmd[]   = { "scrot", "-e", "mv $f ~/Pictures/screenshots", NULL };
+static const char *scrotcmd[]   = { "bash", "/home/m/bin/sel_screenshot.sh", NULL };
 ///--Custom foo---///
 static void halfandcentered(const Arg *arg)
 {
@@ -192,7 +193,7 @@ static key keys[] = {
     // Start programs
     {  MOD ,             XK_space,          start,             {.com =  menucmd}},
     //{  MOD ,              XK_Return,         start,             {.com =  termcmd}},
-    //{  MOD ,              XK_p,              start,             {.com =  scrotcmd}},
+    {  MOD ,              XK_p,              start,             {.com =  scrotcmd}},
     // Exit or restart 2bwm
     {  ALT | SHIFT,        XK_Escape,           twobwm_exit,  {.i=0}},
     {  MOD |CONTROL,      XK_r,           twobwm_restart,    {.i=0}},
