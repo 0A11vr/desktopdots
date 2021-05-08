@@ -45,7 +45,9 @@ static const char *ignore_names[] = {"bar", "xclock"};
 static const char  *menucmd[]   = { "rofi", "-show", "drun", "-show-icons", NULL };
 //static const char  *termcmd[]   = { "kitty", NULL };
 //static const char *scrotcmd[]   = { "scrot", "-e", "mv $f ~/Pictures/screenshots", NULL };
-static const char *scrotcmd[]   = { "bash", "/home/m/bin/sel_screenshot.sh", NULL };
+//static const char *scrotcmd[]   = { "bash", "/home/m/bin/sel_screenshot.sh", NULL };
+static const char *maimcmd[]   = { "bash", "screenshot", NULL };
+static const char *maim_selcmd[]   = { "bash", "screenshot", "select", NULL };
 ///--Custom foo---///
 static void halfandcentered(const Arg *arg)
 {
@@ -173,7 +175,7 @@ static key keys[] = {
     {  MOD |SHIFT ,       XK_v,          sendtonextworkspace,{}},
     {  MOD |SHIFT ,       XK_c,          sendtoprevworkspace,{}},
     // Iconify the window
-    {  MOD ,              XK_o,          hide,              {}},
+    {  MOD ,              XK_i,          hide,              {}},
     // Make the window unkillable
     {  MOD ,              XK_a,          unkillable,        {}},
     // Make the window appear always on top
@@ -193,11 +195,12 @@ static key keys[] = {
     // Start programs
     {  MOD ,             XK_space,          start,             {.com =  menucmd}},
     //{  MOD ,              XK_Return,         start,             {.com =  termcmd}},
-    {  MOD ,              XK_p,              start,             {.com =  scrotcmd}},
+    {  MOD ,              XK_p,              start,             {.com =  maimcmd}},
+    {  MOD |CONTROL,      XK_p,          start,                {.com = maim_selcmd}},
     // Exit or restart 2bwm
     {  ALT | SHIFT,        XK_Escape,           twobwm_exit,  {.i=0}},
     {  MOD |CONTROL,      XK_r,           twobwm_restart,    {.i=0}},
-    {  MOD ,              XK_i,          halfandcentered,    {.i=0}},
+    //{  MOD ,              XK_i,          halfandcentered,    {.i=0}},
     // Change current workspace
        DESKTOPCHANGE(     XK_1,                             0)
        DESKTOPCHANGE(     XK_2,                             1)
