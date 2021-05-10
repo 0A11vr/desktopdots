@@ -1,15 +1,12 @@
 #!/bin/bash
 
-#hello_world () {
-#   echo 'hello, world'
-#}
+# https://github.com/arcolinux/arcolinux-dwm/blob/master/etc/skel/.config/arco-dwm/autostart.sh
 
-#dunstify "$(hello_world)"
+run() {
+	if ! pgrep "$1"; then
+		"$@"&
+	fi
+}	
 
-get_time () {
-   date +'%H:%M'
-}
-
-#get_time
-#echo "$(get_time)"
-dunstify 'Time' "$(get_time)"
+run "dunst"
+run "flashfocus"
