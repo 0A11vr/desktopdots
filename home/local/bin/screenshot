@@ -1,0 +1,27 @@
+#!/bin/sh
+
+date=$(date +%m.%d.%Y_%H:%M:%S)
+title=$(xdotool getactivewindow getwindowname)
+outfile="$HOME/Pictures/screenshots/${date}_-_${title}.png"
+icon="/usr/share/icons/Adwaita/24x24/devices/camera-photo-symbolic.symbolic.png"
+
+screenshot() {
+	case $1 in
+	area)
+		maim -s -u|xclip -selection clipboard -t image/png
+		dunstify -i $icon -u normal 'Selection copied to clipboard'
+		;;
+	wind)	
+		maim -i "$(xdotool getactivewindow)" "$outfile"
+		dunstify -i $icon -u normal 'Screenshot saved to' "$outfile"
+		;;
+	full)
+		maim "$outfile"
+		dunstify -i $icon -u normal 'Screenshot saved to' "$outfile"
+		;;
+	*)	
+		;;
+	esac;
+}
+
+screenshot "$1"
