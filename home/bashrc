@@ -8,18 +8,17 @@
 
 #This should be it (all paths wanted in ${PATH} separated by colons) :
 #export PATH="/usr/local/share/rsi/idl/bin:/home/username/anaconda/bin:$PATH"
-export PATH="$HOME/bin:$PATH"
-export PATH="$HOME/.local:$PATH"
+#export PATH="$HOME/bin:$PATH"
+#export PATH="$HOME/.local/bin:$PATH"
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=10000
 HISTFILESIZE=10000
 
-[[ $- != *i* ]] && return
+#export _JAVA_AWT_WM_NONREPARENTING=1
 
-alias ls='ls --color=auto'
-alias psa="ps -A | grep"
-alias p="pgrep -f"
-alias startsowm="startx ~/.xinitrc sowm"
-alias zzz="sleep 120m && systemctl suspend"
-#PS1='[\u@\h \W]\$ '
-PS1='$ '
+[[ $- != *i* ]] && return
+source ~/.shrc
+
+alias yt='yt-dlp -x --embed-thumbnail --audio-quality 0 --audio-format mp3'
+alias yt-chapters='yt-dlp -x --audio-format mp3 --audio-quality 0 --split-chapters -o "%(title)s - %(chapter_number)s. %(chapter)s.%(ext)s"'
+alias yt-playlist='yt-dlp -x --audio-format mp3 --audio-quality 0 --yes-playlist -o "%(title)s - %(playlist_index)s. %(playlist)s.%(ext)s"'

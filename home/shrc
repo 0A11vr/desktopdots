@@ -1,0 +1,17 @@
+#
+# ~/.shrc
+#
+
+PS1='$ '
+#PS1='[\u@\h \W]\$ '
+
+#PS1='[$USER@$(cat /proc/sys/kernel/hostname) ~]\$ '
+
+
+
+alias ls='ls --color=auto'
+alias psa="ps -A | grep"
+alias p="pgrep -f"
+alias startsowm="startx ~/.xinitrc sowm"
+#alias zzz="sleep 120m && systemctl suspend"
+
