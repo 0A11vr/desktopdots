@@ -46,11 +46,12 @@ static const char *ignore_names[] = {"bar", "xclock"};
 ///--Menus and Programs---///
 //static const char   *menucmd[]   = { "rofi", "-show", "drun", NULL };
 static const char     *menucmd[]   = { "rofi", "-show", "drun", "-show-icons", NULL };
+static const char     *run_cmd[]   = { "rofi", "-show", "run", "-disable-history", NULL };
 static const char     *termcmd[]   = { "kitty", NULL };
 static const char     *win_cmd[]   = { "rofi", "-show", "window", "-show-icons", NULL };
-static const char     *playcmd[]   = { "playerctl", "play-pause", "-i", "firefox", NULL };
-static const char     *prevcmd[]   = { "playerctl", "previous", "-i", "firefox", NULL };
-static const char     *nextcmd[]   = { "playerctl", "next", "-i", "firefox", NULL };
+static const char     *playcmd[]   = { "playerctl", "play-pause", "-p", "spotify,mpd", NULL };
+static const char     *prevcmd[]   = { "playerctl", "previous", "-p", "spotify,mpd", NULL };
+static const char     *nextcmd[]   = { "playerctl", "next", "-p", "spotify,mpd", NULL };
 
 ///--Custom foo---///
 static void halfandcentered(const Arg *arg)
@@ -214,6 +215,7 @@ static key keys[] = {
     {  MOD |SHIFT,        XK_Left,       cursor_move,       {.i=TWOBWM_CURSOR_LEFT}},
     // Start programs
     {  MOD ,              XK_space,                  start, {.com = menucmd}},
+    {  MOD ,              XK_r,                      start, {.com = run_cmd}},
     {  MOD ,              XK_Return,                 start, {.com = termcmd}},
     {  0 | CONTROL,       XK_Tab,                    start, {.com = win_cmd}},
     {  MOD3,              XK_Return,                 start, {.com = playcmd}},
