@@ -1,0 +1,9 @@
+[Trigger]
+Operation = Install
+Operation = Remove
+Type = Package
+Target = *
+
+[Action]
+Description = Saving explicitly installed packages to .local/share/pkglist.txt ...
+When = PostTransaction
