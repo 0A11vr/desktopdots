@@ -13,7 +13,8 @@ run() {
 run mpd
 run dunst
 run flashfocus
-run picom --experimental-backend
+#run picom --experimental-backend
+run picom
 run mpd-mpris
 
 
