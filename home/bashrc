@@ -37,3 +37,6 @@ alias yt-playlist='yt-dlp -x --audio-format mp3 --audio-quality 0 --yes-playlist
 #	then PS1="\e[0;31m# \e[m"
 #	else PS1="\e[0;31m$ \e[m"
 #fi
+alias ls='ls --color=auto'
+alias psa="ps -A | grep"
+alias p="pgrep -f"
