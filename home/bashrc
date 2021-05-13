@@ -18,7 +18,22 @@ HISTFILESIZE=10000
 
 [[ $- != *i* ]] && return
 source ~/.shrc
-
-alias yt='yt-dlp -x --embed-thumbnail --audio-quality 0 --audio-format mp3'
+#alias ls='ls --color=auto'
+#alias psa="ps -A | grep"
+#alias p="pgrep -f"
+#alias startsowm="startx ~/.xinitrc sowm"
+#alias zzz="sleep 120m && systemctl suspend"
+#PS1='[\u@\h \W]\$ '
+#PS1='$ '
+alias yt='yt-dlp -x --add-metadata --embed-thumbnail --audio-quality 0 --audio-format mp3'
 alias yt-chapters='yt-dlp -x --audio-format mp3 --audio-quality 0 --split-chapters -o "%(title)s - %(chapter_number)s. %(chapter)s.%(ext)s"'
 alias yt-playlist='yt-dlp -x --audio-format mp3 --audio-quality 0 --yes-playlist -o "%(title)s - %(playlist_index)s. %(playlist)s.%(ext)s"'
+
+#PS1="\e[0;31m[\u@\h \W]\$ \e[m"
+#PS1="\e[0;31m$ \e[m"
+
+
+#if [ "$(id -u)" -eq 0 ];
+#	then PS1="\e[0;31m# \e[m"
+#	else PS1="\e[0;31m$ \e[m"
+#fi
