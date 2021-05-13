@@ -1,0 +1,4 @@
+#!/bin/sh
+#pid=`pgrep -f sowm`
+#kill "$pid"
+pgrep -f sowm | xargs kill

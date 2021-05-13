@@ -1,0 +1,32 @@
+name:   ""
+colors:
+ foreground:   "#ece8cf"
+ background:   "#2d2d2d"
+ notify:       "#2d2d2d"
+ not-foreground: "#b3b1ad"
+ cursor:       "#b3b1ad"
+ black:
+     normal:     "#393939"
+     bold:       "#474747"
+ red:
+     normal:     "#f26157"
+     bold:       "#ff8c85"
+ green:
+     normal:     "#f1a66a"
+     bold:       "#ffc291"
+ yellow:
+     normal:     "#f7ee7f"
+     bold:       "#fff9ab"
+ blue:
+     normal:     "#8d6a9f"
+     bold:       "#d0a5e6"
+ magenta:
+     normal:     "#55a3c2"
+     bold:       "#70d6ff"
+ cyan:
+     normal:     "#1b998b"
+     bold:       "#3dc4b5"
+ white:
+     normal:     "#dddddd"
+     bold:       "#ece8c9"
+wallpaper:    "/home/skr0tm/Pictures/wallpaper/backstreet.jpg"

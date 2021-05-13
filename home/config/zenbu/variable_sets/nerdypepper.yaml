@@ -1,0 +1,32 @@
+name:   ""
+colors:
+ foreground:   "#EEFFFF"
+ background:   "#212121"
+ notify:       "#212121"
+ not-foreground: "#9575cd"
+ cursor:       "#EEFFFF"
+ black:
+     normal:     "#212121"
+     bold:       "#4A4A4A"
+ red:
+     normal:     "#F07178"
+     bold:       "#F78C6C"
+ green:
+     normal:     "#13CA91"
+     bold:       "#303030"
+ yellow:
+     normal:     "#FDF200"
+     bold:       "#353535"
+ blue:
+     normal:     "#7898FB"
+     bold:       "#B2B2C2"
+ magenta:
+     normal:     "#FF2079"
+     bold:       "#EEFFFF"
+ cyan:
+     normal:     "#00FECA"
+     bold:       "#FF5370"
+ white:
+     normal:     "#EEFFFF"
+     bold:       "#FFFFFF"
+wallpaper:    "/home/m/Pictures/oMuGsZb.jpg"

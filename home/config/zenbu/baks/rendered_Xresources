@@ -1,0 +1,106 @@
+
+! URxvt
+
+
+URxvt.font       :xft:Input:size=11:style=Regular
+URxvt.italicFont :xft:Input:size=11:style=Italic
+URxvt.boldFont   :xft:Input:size=11:style=Bold
+URxvt.cursorBlink         : 0
+URxvt.lineSpace           : 0
+URxvt.letterSpace         : 0
+URxvt.scrollBar           : false
+URxvt.internalBorder      : 12
+URxvt.cursorUnderline     : false
+URxvt.geometry            : 55x20
+URxvt.thickness           : 0
+URxvt.titleBar            : false
+URxvt.intensityStyles     : true
+
+! Colors
+URxvt.borderColor:  {{ bgc }}
+URxvt.background:   {{ bgc }}
+URxvt.foreground:   {{ fgc }}
+
+! Black
+URxvt.color0:       {{ n_black }}
+URxvt.color8:       {{ b_black }}
+
+! Red
+URxvt.color1:       {{ n_red }}
+URxvt.color9:       {{ b_red }}
+
+! Green
+URxvt.color2:       {{ n_green }}
+URxvt.color10:      {{ b_green }}
+
+! Yellow
+URxvt.color3:       {{ n_yellow }}
+URxvt.color11:      {{ b_yellow }}
+
+! Blue
+URxvt.color4:       {{ n_blue }}
+URxvt.color12:      {{ b_blue }}
+
+! Magenta
+URxvt.color5:       {{ n_magenta }}
+URxvt.color13:      {{ b_magenta }}
+
+! Cyan
+URxvt.color6:       {{ n_cyan }}
+URxvt.color14:      {{ b_cyan }}
+
+! White
+URxvt.color7:       {{ n_white }}
+URxvt.color15:      {{ b_white }}
+
+! ROFI
+rofi.color-window:    {{ bgc }} , {{ bgc }} , {{ bgc }} , {{ bgc }} , {{ fgc }}
+rofi.color-normal:    {{ bgc }} , {{ fgc }} , {{ bgc }} , {{ bgc }} , {{ fgc }}
+rofi.color-active:    {{ fgc }} , {{ fgc }} , {{ bgc }} , {{ fgc }} , {{ bgc }}
+rofi.color-urgent:    {{ bgc }} , {{ fgc }} , {{ bgc }} , {{ bgc }} , {{ fgc }}
+
+rofi.fake-transparency : true
+rofi.font              : Equity Text B 18
+rofi.columns           : 1
+rofi.separator-style   : none
+rofi.hide-scrollbar    : true
+rofi.location          : 2
+rofi.yoffset           : 20
+rofi.xoffset           : 20
+rofi.padding           : 32
+rofi.fullscreen        : false
+rofi.width             : 650
+rofi.lines             : 3
+rofi.modi: window,drun
+!rofi.sidebar-mode: true
+rofi.kb-mode-next: Alt+l
+rofi.kb-mode-previous: Alt+h
+rofi.kb-row-up: Alt+k
+rofi.kb-row-down: Alt+j
+
+Xft.dpi: 96
+Xft.antialias: true
+!Xft.hinting: true
+!Xft.rgba: rgb
+!!Xft.autohint: true
+Xft.hintstyle: hintslight
+!Xft.lcdfilter: lcddefault
+
+! 2bwm
+
+twobwm.border_width: 5
+twobwm.outer_border: 2
+twobwm.focus_color: {{ fgc }}
+twobwm.unfocus_color: {{ bgc }}
+twobwm.fixed_color: {{ n_blue }}
+twobwm.unkill_color: {{ n_cyan }}
+twobwm.outer_border_color: {{ bgc }}
+twobwm.fixed_unkill_color: {{ n_magenta }}
+twobwm.inverted_colors: false
+twobwm.enable_compton: true
+
+! RGB test
+! {{ n_red | to_rgb }}
+
+! Expression test
+! {{ n_primary.lstrip('#') }}

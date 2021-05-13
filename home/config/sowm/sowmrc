@@ -1,0 +1,29 @@
+#
+# wm independent hotkeys
+#
+alt + ctrl + p
+	sleep 0.2; \
+	scrot -a $(slop -f '%x,%y,%w,%h') '/tmp/%F_%T_$wx$h.png' -e 'xclip -selection clipboard -target image/png -i $f && rm $f'
+alt + p
+	scrot -e 'mv $f ~/Pictures/screenshots'
+ctrl + Tab
+	skippy-xd-runner --toggle
+# terminal emulator
+alt + Return
+	kitty
+
+# program launcher
+# alt + @space
+# 	rofi -show drun
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
+
+alt + d
+	discord
+
+# sowm hotkeys
+
+alt + shift + Escape
+	$HOME/.config/sowm/quit
