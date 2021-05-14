@@ -7,4 +7,4 @@ Target = *
 [Action]
 Description = Saving explicitly installed packages to .local/share/pkglist.txt ...
 When = PostTransaction
-Exec = /bin/sh -c '/usr/bin/pacman -Qqetn > /home/m/.local/share/pkglist.txt'
+Exec = /bin/sh -c '/usr/bin/pacman -Qqetn > /home/m/.local/share/pkglist.txt && /usr/bin/pacman -Qqetm > /home/m/.local/share/foreignpkglist.txt'
