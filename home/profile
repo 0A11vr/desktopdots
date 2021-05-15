@@ -2,23 +2,5 @@
 # .profile
 #
 
-
-
-export _JAVA_AWT_WM_NONREPARENTING=1
-export LESSHISTFILE=-
-
-
-
 [ -f "$HOME/.bashrc" ] && . "$HOME/.bashrc"
-
-
-
-
-
-
 ENV=$HOME/.shrc; export ENV
-
-
-
-alias startsowm="startx ~/.xinitrc sowm"
-
