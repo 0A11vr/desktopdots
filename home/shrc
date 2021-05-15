@@ -24,12 +24,15 @@ fi
 
 export _JAVA_AWT_WM_NONREPARENTING=1
 export LESSHISTFILE=-
+export PATH="$HOME/.local/bin:$PATH"
+source ~/.alias
 
-PS1='$ '
+
+
+
+
+
+#PS1='$ '
 #PS1='$ '
 #PS1='[\u@\h \W]\$ '
 #PS1='[$USER@$(cat /proc/sys/kernel/hostname) ~]\$ '
-
-
-export PATH="$HOME/.local/bin:$PATH"
-
