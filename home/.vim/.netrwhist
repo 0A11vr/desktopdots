@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/home/m/.local/bin'
+let g:netrw_dirhist_6='/home/m/Clones/2bwm(testing)'
+let g:netrw_dirhist_5='/home/m/.local/share/2bwm'
+let g:netrw_dirhist_4='/home/m/bin'
+let g:netrw_dirhist_3='/usr/share/color'
+let g:netrw_dirhist_2='/etc/X11/xorg.conf.d'
+let g:netrw_dirhist_1='/home/m/.vim'
